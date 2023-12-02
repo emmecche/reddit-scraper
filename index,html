@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Image Gallery</title>
+</head>
+<body>
+    <h1>Reddit Image Gallery</h1>
+    <form method="post">
+        <label for="subreddit">Enter subreddit name:</label>
+        <input type="text" id="subreddit" name="subreddit" required>
+        <button type="submit">Get Images</button>
+    </form>
+
+    {% if image_urls %}
+        <h2>{{ subreddit_name }} Images</h2>
+        <div>
+            {% for url in image_urls %}
+                <img src="{{ url }}" alt="Reddit Image">
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>
