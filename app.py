@@ -6,7 +6,7 @@ app = Flask(__name__)
 reddit = praw.Reddit(
     client_id="2rt7E07Jz8zufkMSOqJCow",
     client_secret="mhoig-kFZSeUm27nQtqha932m2Dz_A",
-    user_agent="Money_Tangerine1471",
+    user_agent="subreddit image scraper by u/Money_Tangerine1471",
 )
 
 @app.route("/", methods=["GET", "POST"])
